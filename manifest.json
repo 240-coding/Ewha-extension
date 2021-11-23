@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "이화 바로가기",
+    "version": "1.0.0",
+
+    "description": "이화여대 학생들을 위한 바로가기 모음",
+    "icons": {
+
+    },
+    "default_locale": "ko",
+    "browser_action": {
+        "default_icon": {
+
+        },
+        "default_title": "이화 바로가기",
+        "default_popup": "popup.html"
+    }
+}
