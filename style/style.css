@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap");
 
 :root {
   --ewha-lightgrey: rgb(247, 248, 248);
@@ -25,6 +25,7 @@ span,
 p {
   font-family: "Noto Sans KR", sans-serif;
   font-size: small;
+  font-weight: 200;
   color: black;
 }
 
@@ -32,11 +33,18 @@ p {
 .title {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 10px 0 10px 0;
 }
 
+.title__logo {
+  object-fit: contain;
+  width: 25px;
+  margin-right: 5px;
+}
 .title__text {
   font-size: medium;
+  font-weight: 400;
 }
 
 /* 각 바로가기 박스 */
@@ -107,6 +115,9 @@ select::-ms-expand {
   border: 1px solid var(--ewha-grey);
   border-radius: 0px;
   margin-right: 5px;
+  padding: 0px 10px 0px 10px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 200;
 }
 
 /* 이동 버튼 */
@@ -117,6 +128,7 @@ select::-ms-expand {
   color: white;
   font-family: "Noto Sans KR", sans-serif;
   font-size: small;
+  font-weight: 200;
   background-color: var(--ewha-green);
   border: 1px solid var(--ewha-grey);
   border-radius: 5px;

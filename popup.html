@@ -2,12 +2,12 @@
 <html>
     <head>
         <link rel="stylesheet" href="./style/style.css">
-        <script src="popup.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="title">
-                <span class="title__text">바로가기</span>
+                <img src="./images/ewha-logo.png" class="title__logo"/>
+                <span class="title__text">벗들을 위한 바로가기 모음</span>
             </div>
             <div class="container__column">
                 <div class="shortcut" id="sc-homepage">
@@ -20,7 +20,7 @@
                     <div class="icon-wrapper">
                         <i class="fas fa-clock"></i>
                     </div>
-                    <span class="shortcut__text">학사공지</span>
+                    <span class="shortcut__text">공지사항</span>
                 </div>
                 <div class="shortcut" id="sc-cypercampus">
                     <div class="icon-wrapper">
@@ -68,7 +68,7 @@
                     <span class="custom__text">내 단과대</span>
                 </div>
                 <div class="custom__rightcolumn">
-                    <select name="college" class="shortcut__list"></select>
+                    <select name="college" class="shortcut__list" id="college"></select>
                     <button class="shortcut__button" id="college-button" type="button">이동</button>
                 </div>
             </div>
@@ -77,7 +77,9 @@
                     <span class="custom__text">내 학과</span>
                 </div>
                 <div class="custom__rightcolumn">
-                    <select name="major" class="shortcut__list"></select>
+                    <select name="major" class="shortcut__list">
+                        <option>아직..미완성..</option>
+                    </select>
                     <button class="shortcut__button" id="major-button" type="button">이동</button>
                 </div>
             </div>
@@ -85,6 +87,7 @@
                 <span class="info__text">made by 240 / github: @240-coding</span>
             </div>
         </div>
+        <script src="popup.js"></script>
         <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
     </body>
 </html>
