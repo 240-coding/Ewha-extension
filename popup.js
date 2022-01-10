@@ -172,8 +172,10 @@ let currentCollege =
 let currentMajor =
   localStorage.getItem("major") === null
     ? "국어국문학과"
-    : localStorage.getItem("college");
-
+    : localStorage.getItem("major");
+console.log("HI");
+console.log(currentCollege);
+console.log(currentMajor);
 // 단과대 드롭다운 관련 코드
 const collegeSelect = document.getElementById("college");
 const collegeArray = Object.keys(cl);
@@ -187,10 +189,15 @@ collegeArray.forEach((college) => {
   collegeSelect.add(opt, null);
 });
 
+const collegeOptions = Array.from(collegeSelect.options);
+collegeOptions.forEach((option, i) => {
+  if (option.value === currentCollege) collegeSelect.selectedIndex = i;
+});
+
 // 단과대 이동 버튼 이벤트 리스너 등록
 const move = document.getElementById("college-button");
 move.addEventListener("click", () => {
-  window.open(cl[currentCollege]);
+  window.open(cl[currentCollege].url);
 });
 
 // 학과 드롭다운 관련 코드
@@ -201,6 +208,7 @@ let majorArray = Object.keys(cl[currentCollege].major);
 collegeSelect.onchange = () => {
   currentCollege = collegeSelect.value;
   majorArray = Object.keys(cl[currentCollege].major);
+  currentMajor = majorArray[0];
   console.log(currentCollege);
   console.log(majorArray);
   while (majorSelect.firstChild) {
@@ -223,6 +231,11 @@ majorArray.forEach((major) => {
   majorSelect.add(opt, null);
 });
 
+const majorOptions = Array.from(majorSelect.options);
+majorOptions.forEach((option, i) => {
+  if (option.value === currentMajor) majorSelect.selectedIndex = i;
+});
+
 // 학과 드롭다운 및 이동 버튼 이벤트 리스너 등록
 majorSelect.addEventListener("change", () => {
   currentMajor = majorSelect.value;
@@ -234,9 +247,6 @@ majorMove.addEventListener("click", () => {
   window.open(cl[currentCollege].major[currentMajor]);
 });
 
-function savedInfo() {
-  whale.storage.local.set({});
-}
 // 바로가기 이벤트 리스너 등록
 const scArray = Object.keys(sc);
 scArray.forEach((link) => {
