@@ -164,6 +164,16 @@ const cl = {
   },
 };
 
+// 유저 단과대 및 전공
+let currentCollege =
+  localStorage.getItem("college") === null
+    ? "인문과학대학"
+    : localStorage.getItem("college");
+let currentMajor =
+  localStorage.getItem("major") === null
+    ? "국어국문학과"
+    : localStorage.getItem("college");
+
 // 단과대 드롭다운 관련 코드
 const collegeSelect = document.getElementById("college");
 const collegeArray = Object.keys(cl);
@@ -177,12 +187,7 @@ collegeArray.forEach((college) => {
   collegeSelect.add(opt, null);
 });
 
-// 단과대 드롭다운 및 이동 버튼 이벤트 리스너 등록
-let currentCollege = collegeArray[0];
-collegeSelect.addEventListener("change", () => {
-  currentCollege = collegeSelect.value;
-});
-
+// 단과대 이동 버튼 이벤트 리스너 등록
 const move = document.getElementById("college-button");
 move.addEventListener("click", () => {
   window.open(cl[currentCollege]);
@@ -192,9 +197,12 @@ move.addEventListener("click", () => {
 const majorSelect = document.getElementById("major");
 let majorArray = Object.keys(cl[currentCollege].major);
 
-// 학과 드롭다운 옵션 등록
+// 단과대에 따른 학과 드롭다운 옵션 등록
 collegeSelect.onchange = () => {
+  currentCollege = collegeSelect.value;
   majorArray = Object.keys(cl[currentCollege].major);
+  console.log(currentCollege);
+  console.log(majorArray);
   while (majorSelect.firstChild) {
     majorSelect.removeChild(majorSelect.firstChild);
   }
@@ -204,6 +212,8 @@ collegeSelect.onchange = () => {
     opt.value = major;
     majorSelect.add(opt, null);
   });
+  localStorage.setItem("college", currentCollege);
+  localStorage.setItem("major", currentMajor);
 };
 
 majorArray.forEach((major) => {
@@ -214,9 +224,9 @@ majorArray.forEach((major) => {
 });
 
 // 학과 드롭다운 및 이동 버튼 이벤트 리스너 등록
-let currentMajor = majorArray[0];
 majorSelect.addEventListener("change", () => {
   currentMajor = majorSelect.value;
+  localStorage.setItem("major", currentMajor);
 });
 
 const majorMove = document.getElementById("major-button");
@@ -224,6 +234,9 @@ majorMove.addEventListener("click", () => {
   window.open(cl[currentCollege].major[currentMajor]);
 });
 
+function savedInfo() {
+  whale.storage.local.set({});
+}
 // 바로가기 이벤트 리스너 등록
 const scArray = Object.keys(sc);
 scArray.forEach((link) => {

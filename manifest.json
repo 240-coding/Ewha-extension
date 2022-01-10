@@ -15,5 +15,8 @@
         "default_title": "이화 바로가기",
         "default_popup": "popup.html"
     },
-    "content_security_policy": "script-src 'self' https://kit.fontawesome.com/6478f529f2.js; object-src 'self'"
+    "content_security_policy": "script-src 'self' https://kit.fontawesome.com/6478f529f2.js; object-src 'self'",
+    "permissions": [
+        "storage"
+    ]
 }
