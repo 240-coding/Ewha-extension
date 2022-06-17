@@ -65,8 +65,8 @@ const cl = {
       컴퓨터공학전공: "http://cse.ewha.ac.kr/",
       사이버보안전공: "http://security.ewha.ac.kr/",
       전자전기공학전공: "http://ee.ewha.ac.kr/",
-      식품공학전공: "http://my.ewha.ac.kr/foodsnt/",
-      화학신소재공학전공: "https://chems.ewha.ac.kr:6075/web/home.php",
+      식품생명공학전공: "http://my.ewha.ac.kr/foodsnt/",
+      화공신소재공학전공: "https://chems.ewha.ac.kr:6075/web/home.php",
       건축학전공: "http://ea.ewha.ac.kr/",
       건축도시시스템공학전공: "http://home.ewha.ac.kr/~ewharchi/",
       환경공학전공: "http://home.ewha.ac.kr/~envse/",
@@ -156,6 +156,12 @@ const cl = {
       국제학부: "http://scrantoncollege.ewha.ac.kr/dis/",
     },
   },
+  AI융합학부: {
+    url: "http://ai.ewha.ac.kr/ai/index.do",
+    major: {
+      인공지능전공: "http://ai.ewha.ac.kr/ai/index.do",
+    },
+  },
   호크마교양대학: {
     url: "http://hokma.ewha.ac.kr",
     major: {
@@ -173,16 +179,13 @@ let currentMajor =
   localStorage.getItem("major") === null
     ? "국어국문학과"
     : localStorage.getItem("major");
-console.log("HI");
-console.log(currentCollege);
-console.log(currentMajor);
+
 // 단과대 드롭다운 관련 코드
 const collegeSelect = document.getElementById("college");
 const collegeArray = Object.keys(cl);
 
 // 단과대 드롭다운 옵션 등록
 collegeArray.forEach((college) => {
-  console.log(college);
   let opt = document.createElement("option");
   opt.text = college;
   opt.value = college;
