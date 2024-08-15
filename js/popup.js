@@ -55,23 +55,24 @@ const cl = {
       수학과: "http://math.ewha.ac.kr",
       통계학과: "http://stat.ewha.ac.kr",
       물리학과: "http://physics.ewha.ac.kr",
-      화학나노전공: "http://my.ewha.ac.kr/chem",
-      생명과학전공: "http://my.ewha.ac.kr/biology",
+      화학생명분자과학부: "https://myr.ewha.ac.kr/chem/index.do",
+      화학나노전공: "https://myr.ewha.ac.kr/chem/index.do",
+      생명과학전공: "https://biology.ewha.ac.kr/",
     },
   },
-  엘텍공과대학: {
+  공과대학: {
     url: "http://eng.ewha.ac.kr",
     major: {
-      컴퓨터공학전공: "http://cse.ewha.ac.kr/",
-      사이버보안전공: "http://security.ewha.ac.kr/",
+      융합전자반도체공학부: "https://ee.ewha.ac.kr/ewhaeleca/index.do",
       전자전기공학전공: "http://ee.ewha.ac.kr/",
-      식품생명공학전공: "http://my.ewha.ac.kr/foodsnt/",
-      화공신소재공학전공: "https://chems.ewha.ac.kr:6075/web/home.php",
-      건축학전공: "http://ea.ewha.ac.kr/",
-      건축도시시스템공학전공: "http://home.ewha.ac.kr/~ewharchi/",
-      환경공학전공: "http://home.ewha.ac.kr/~envse/",
-      기후에너지시스템공학전공: "http://cese.ewha.ac.kr/",
-      휴먼기계바이오공학부: "http://mbe.ewha.ac.kr/",
+      지능형반도체공학전공: "https://ee.ewha.ac.kr/ewhaeleca/index.do",
+      식품생명공학과: "http://my.ewha.ac.kr/foodsnt/",
+      화공신소재공학과: "https://chems.ewha.ac.kr:6075/web/home.php",
+      건축학과: "http://ea.ewha.ac.kr/",
+      건축도시시스템공학과: "http://home.ewha.ac.kr/~ewharchi/",
+      환경공학과: "http://home.ewha.ac.kr/~envse/",
+      기후에너지시스템공학과: "http://cese.ewha.ac.kr/",
+      휴먼기계바이오공학과: "http://mbe.ewha.ac.kr/",
     },
   },
   음악대학: {
@@ -101,15 +102,15 @@ const cl = {
     url: "http://my.ewha.ac.kr/teachers",
     major: {
       교육학과: "http://my.ewha.ac.kr/ewhaedu/",
-      유아고육과: "http://my.ewha.ac.kr/eece2624/",
-      초등교육과: "http://my.ewha.ac.kr/eee/",
+      유아고육과: "https://eece2624.ewha.ac.kr/",
+      초등교육과: "https://eee.ewha.ac.kr/",
       교육공학과: "http://my.ewha.ac.kr/et/",
-      특수교육과: "http://my.ewha.ac.kr/sped/",
-      영어교육과: "http://home.ewha.ac.kr/~edueng/",
-      사회과교육과: "http://my.ewha.ac.kr/dsse/",
-      국어교육과: "http://my.ewha.ac.kr/kle/",
+      특수교육과: "https://sped.ewha.ac.kr/",
+      영어교육과: "https://engedu.ewha.ac.kr/",
+      사회과교육과: "https://dsse.ewha.ac.kr/",
+      국어교육과: "https://kle.ewha.ac.kr/",
       과학교육과: "http://myhome.ewha.ac.kr/user/sciedu/index.action",
-      수학교육과: "http://my.ewha.ac.kr/mathed/",
+      수학교육과: "https://mathed.ewha.ac.kr/",
     },
   },
   경영대학: {
@@ -119,10 +120,10 @@ const cl = {
     },
   },
   신산업융합대학: {
-    url: "http://my.ewha.ac.kr/convergence/",
+    url: "http://convergence.ewha.ac.kr/",
     major: {
       융합콘텐츠학과: "http://cc.ewha.ac.kr/",
-      의류산업학과: "http://my.ewha.ac.kr/fashion/",
+      의류산업학과: "https://fashion.ewha.ac.kr/",
       국제사무학과: "http://ioa.ewha.ac.kr/",
       식품영양학과: "http://nsfm.ewha.ac.kr/",
       융합보건학과: "http://publichealth.ewha.ac.kr/",
@@ -143,23 +144,31 @@ const cl = {
     },
   },
   약학대학: {
-    url: "http://my.ewha.ac.kr/pharm21",
+    url: "https://pharm21.ewha.ac.kr/",
     major: {
-      약학과: "http://my.ewha.ac.kr/pharm21/",
+      약학과: "https://pharm21.ewha.ac.kr/",
     },
   },
   스크랜튼대학: {
-    url: "http://www.ewha.ac.kr/ewha/academics/scranton.do",
+    url: "http://scrantoncollege.ewha.ac.kr",
     major: {
-      스크랜튼학부: "http://scrantoncollege.ewha.ac.kr/shp/",
-      뇌인지과학전공: "http://scrantoncollege.ewha.ac.kr/bcs/",
-      국제학부: "http://scrantoncollege.ewha.ac.kr/dis/",
+      스크랜튼학부:
+        "https://scrantoncollege.ewha.ac.kr/scranton/free-major/faculty-introduction.do",
+      뇌인지과학전공:
+        "https://scrantoncollege.ewha.ac.kr/scranton/department-brain/brain-major-introduction.do",
+      국제학전공:
+        "https://scrantoncollege.ewha.ac.kr/scranton/international-studies/international-introduction.do",
+      글로벌한국학전공:
+        "https://scrantoncollege.ewha.ac.kr/scranton/korean-studies/korean-introduction.do",
     },
   },
-  AI융합학부: {
-    url: "http://ai.ewha.ac.kr/ai/index.do",
+  인공지능대학: {
+    url: "https://ai.ewha.ac.kr/",
     major: {
-      인공지능전공: "http://ai.ewha.ac.kr/ai/index.do",
+      컴퓨터공학과: "https://myr.ewha.ac.kr/cse/index.do",
+      사이버보안과: "https://myr.ewha.ac.kr/security/index.do",
+      인공지능학과: "https://myr.ewha.ac.kr/deptai/index.do",
+      데이터사이언스학과: "https://datascience.ewha.ac.kr/",
     },
   },
   호크마교양대학: {
